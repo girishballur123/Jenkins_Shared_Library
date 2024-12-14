@@ -1,4 +1,4 @@
-// vars/pipeline.groovy
+// vars/reusablePipeline.groovy
 def call(String gitUrl) {
     pipeline {
         agent any
@@ -10,10 +10,10 @@ def call(String gitUrl) {
                     // Checkout repository
                     checkout([
                             $class: 'GitSCM',
-                            branches: [[name: '*/main']], // Replace 'main' with your default branch
+                            branches: [[name: '*/main']], // Replace with your branch name
                             userRemoteConfigs: [[
                                                         url: gitUrl,
-                                                        credentialsId: constants.github-token // Replace with your credentials ID
+                                                        credentialsId: 'github-token' // Replace with your credentials ID
                                                 ]]
                     ])
                 }
