@@ -24,12 +24,6 @@ def call(String gitUrl) {
                     sh 'mvn clean install'
                 }
             }
-
-            stage('Test') {
-                steps {
-                    echo 'Test stage logic here...'
-                }
-            }
         }
     }
 }
