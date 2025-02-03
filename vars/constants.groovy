@@ -8,7 +8,7 @@ import groovy.transform.Field
 
 // Jenkins Credential IDs
 @Field String GIT_CREDENTIALS_ID = 'jenkinsfile1'
-@Field String ECR_CREDENTIALS_ID = 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 816069160812.dkr.ecr.ap-south-1.amazonaws.com'
+@Field String ECR_CREDENTIALS_ID = 'aws-credentials'
 
 def call() {
     return this
